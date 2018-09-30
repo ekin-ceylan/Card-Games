@@ -1,0 +1,53 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: green;
+    height: 100vh;
+}
+
+#up, #down {
+    height: 25%;
+    background-color: yellow;
+    text-align: center;
+}
+
+#middle {
+    height: 50%;
+}
+
+    #middle div {
+        height: 100%;
+        display: inline-block;
+    }
+
+        #middle div:first-child, #middle div:last-child {
+            background-color: blue;
+            width: 25%;
+        }
+
+        #middle div:nth-child(2) {
+            width: 50%;
+            background-color: red;
+        }
+
+.container {
+    margin: 0 auto;
+    display: inline-block;
+    max-width: 50%;
+    height: 80%;
+    white-space: nowrap;
+}
+
+    .container div {
+        float: left;
+        display: inline-block;
+        height: 100%;
+    }
+
+    .container img:hover {
+        box-shadow: 2px 2px 2px 2px red;
+    }
+
+        .container div img {
+            height: 100%;
+        }
