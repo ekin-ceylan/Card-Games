@@ -2,7 +2,7 @@
 var deck;
 
 var consts = {
-    signs: ['heart', 'spade', 'diamond', 'club'],
+    signs: ['club', 'diamond', 'spade', 'heart'],
     names: ['ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king'],
     imgRoot: 'assets/img/cards/',
     imgBack: 'assets/img/cards/back-red.png'
@@ -40,7 +40,7 @@ function createDeck() {
 
             let img = consts.imgRoot + consts.signs[i] + '-' + consts.names[j] + '.svg';
 
-            papers.push(new card(consts.signs[i], consts.names[j], i * 10 + j, point, img));
+            papers.push(new card(consts.signs[i], consts.names[j], i * 13 + j, point, img));
         }
     }
 
