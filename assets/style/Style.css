@@ -1,53 +1,133 @@
 ﻿body {
     margin: 0;
     padding: 0;
-    background-color: green;
+    background: url(../img/green-felt.jpg) no-repeat;
+    background-size: cover;
     height: 100vh;
 }
 
-#up, #down {
-    height: 25%;
-    background-color: yellow;
+img {
+    height: 140px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+span {
+    width: 100%;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    font-size: 20px;
+    font-family: Sans-Serif;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------------*/
+
+body > div {
+    float: left;
+}
+
+.hand {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .hand > div {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+/*--------------------------------------------------------*/
+
+.vertical {
+    height: 75%;
+    width: 25%;
     text-align: center;
+    flex-direction: column;
+    padding-bottom: 120px;
 }
 
-#middle {
-    height: 50%;
+    .vertical > div {
+        height: 25px;
+    }
+
+        .vertical > div > img {
+        }
+
+/*--------------------------------------------------------*/
+
+.horizontal {
+    width: 100%;
+    height: 25%;
+    padding-right: 80px;
+    max-width: 900px;
 }
 
-    #middle div {
-        height: 100%;
-        display: inline-block;
+    .horizontal > div {
+        width: 25px;
     }
 
-        #middle div:first-child, #middle div:last-child {
-            background-color: blue;
-            width: 25%;
-        }
-
-        #middle div:nth-child(2) {
-            width: 50%;
-            background-color: red;
-        }
-
-.container {
-    margin: 0 auto;
-    display: inline-block;
-    max-width: 50%;
-    height: 80%;
-    white-space: nowrap;
+#south {
+    padding-left: 15%;
+    box-sizing: content-box;
 }
 
-    .container div {
-        float: left;
-        display: inline-block;
-        height: 100%;
+#center {
+    height: 75%;
+    width: 50%;
+}
+
+#table {
+    position: relative;
+    height: 75%;
+}
+
+    #table > div {
+        position: absolute;
     }
 
-    .container img:hover {
-        box-shadow: 2px 2px 2px 2px red;
-    }
+#west-slot {
+    right: calc(50% + 30px);
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-        .container div img {
-            height: 100%;
-        }
+#north-slot {
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#east-slot {
+    left: calc(50% + 30px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#south-slot {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/*--------------------------------------------------------*/
+
+img:hover {
+    box-shadow: 0 0 5px 5px white;
+}
+
+#south > div:hover {
+    z-index: 10;
+}
+
+#south img:hover {
+    transform: translateY(-20px);
+}
+
+/*--------------------------------------------------------*/
+

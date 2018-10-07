@@ -2,22 +2,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-
+    <script src="assets/scripts/script.js"></script>
     <link href="assets/style/Style.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="up"></div>
-    <div id="middle">
-        <div id="left"></div><div id="center"></div><div id="right"></div>
+
+    <div id="west" class="hand vertical">
+        <span>Batı</span>
     </div>
-    <div id="down">
-        <div class="container container-horizontal">
-            <div><img src="assets/img/cards/karo-1.gif" /></div>
-            <div><img src="assets/img/cards/karo-1.gif" /></div>
-            <div><img src="assets/img/cards/karo-1.gif" /></div>
-            <div><img src="assets/img/cards/karo-1.gif" /></div>
-            <div><img src="assets/img/cards/karo-1.gif" /></div>
+
+    <div id="center">
+        <div id="north" class="hand horizontal">
+            <span>Kuzey</span>
+        </div>
+
+        <div id="table">
+            <div id="west-slot"></div>
+            <div id="north-slot"></div>
+            <div id="east-slot"></div>
+            <div id="south-slot"></div>
         </div>
     </div>
+
+    <div id="east" class="hand vertical">
+        <span>Doğu</span>
+    </div>
+
+    <div id="south" class="hand horizontal">
+        <span>Player</span>
+    </div>
+
 </body>
 </html>
